@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language: en
+title: Ahui 个人博客
+subtitle: 一个30岁才开始写的技术博客
+description: 前端 FE WEB fe web 开发 网站开发 前端开发 前端技术 web技术
+keywords: 
+author: lipenghui
+language: zh-CN
 timezone:
 
 # URL
