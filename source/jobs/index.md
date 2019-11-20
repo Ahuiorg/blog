@@ -9,5 +9,4 @@ date: 2019-08-31 12:45:42
 
 所以， 在了解浏览器缓存之前， 先来看一下一个 http 请求报文都有哪些标志
 
-- ![http-header](/images/jobs/http-header.png, 'HTTP 请求')
 
