@@ -2,6 +2,9 @@
 title: bodybuilding notes
 date: 2019-11-25 14:15:26
 tags:
+  肩
+  肱三
+categories:
   fit
 ---
 

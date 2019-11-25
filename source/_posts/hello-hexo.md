@@ -2,9 +2,9 @@
 title: hello hexo
 date: 2019-11-21 18:00:10
 tags:
-  -hexo
+  hexo
 categories:
-  -tools
+  tools
 ---
 
 
