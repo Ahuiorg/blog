@@ -14,7 +14,7 @@ categories:
 
 一开始的时候从控制台看到的是使用 action 的 this.$store.dispatch  的时候的报错
 
-
+<!-- more -->
 
 代码：
 
@@ -26,7 +26,7 @@ categories:
 
 报错信息
 
-![](/Users/penghuilee/didi/Blog/source/images/vuex/1.png)
+![](/images/vuex/1.png)
 
 
 
@@ -46,7 +46,7 @@ categories:
 
 结果是 undefined
 
-![](/Users/penghuilee/didi/Blog/source/images/vuex/2.png)
+![](/images/vuex/2.png)
 
 **【分析】**
 
@@ -93,7 +93,7 @@ new Vue({
 
 并且打印的 Store 也有内容：
 
-![](/Users/penghuilee/didi/Blog/source/images/vuex/3.png)
+![](/images/vuex/3.png)
 
 
 
