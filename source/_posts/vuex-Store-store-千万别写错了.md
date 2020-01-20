@@ -1,11 +1,9 @@
 ---
 title: vuex Store store 千万别写错了
+tags: vuex
+categories: bugfix
+abbrlink: 4068032706
 date: 2019-11-26 18:11:13
-tags:
-  vuex
-categories:
-  bugfix
-
 ---
 
 #### 问题：

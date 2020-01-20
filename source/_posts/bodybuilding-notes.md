@@ -1,10 +1,9 @@
 ---
 title: bodybuilding notes
+tags: 健身
+categories: fit
+abbrlink: 3947484483
 date: 2019-11-25 14:15:26
-tags:
-  健身
-categories:
-  fit
 ---
 
 ### 2019 已经结束， 不忘初心， 坚持就是胜利

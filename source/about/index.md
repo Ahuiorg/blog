@@ -23,5 +23,4 @@ date: 2019-11-21 11:26:43
 
 <center>前端开发</center>
 <br/>
-<center>爱好：摄影、篮球、健身</center>
-
+<center>爱好：滑雪、摄影、篮球、健身</center>
