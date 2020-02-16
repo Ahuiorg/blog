@@ -5,8 +5,6 @@ date: 2020-02-14 22:16:26
 tags:
 ---
 
-### Lightroom 学习笔记
-
 课程资源: [秋凉 LightRoom4 教学视频](http://qiuliang.com/lightroom4/index.html)
 课程来源: [华摄影师](https://tuchong.com/15913996/) 2020 年元宵节送
 
