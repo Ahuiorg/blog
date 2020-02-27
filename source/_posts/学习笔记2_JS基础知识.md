@@ -2,7 +2,8 @@
 title: 学习笔记2 JS基础知识
 abbrlink: 1015335320
 date: 2020-02-18 12:14:32
-tags: 课程学习
+tags: [js]
+categories: learning notes
 ---
 
 课程地址: [JavaScript 基础知识](https://www.bilibili.com/video/av58604768)
