@@ -4,8 +4,8 @@
 
 # Site
 title: 阿辉的个人博客
-subtitle: Lee Penghui's BLOG
-description: 一个30岁才开始写的技术博客
+subtitle: Penghui's BLOG
+description: 30岁才开始写的博客
 keywords: "前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验"
 author: lipenghui
 language: zh-CN
@@ -93,3 +93,14 @@ feed:
   content:
   content_limit:
   content_limit_delim: " "
+
+# search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# pv uv
+footer:
+  counter: true
