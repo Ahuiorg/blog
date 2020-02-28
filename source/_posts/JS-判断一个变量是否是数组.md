@@ -54,7 +54,11 @@ console.log(obj.constructor === Object); //true
 
 > 每个对象都有一个 toString() 方法，当该对象被表示为一个文本值时，或者一个对象以预期的字符串方式引用时自动调用。默认情况下，toString() 方法被每个 Object 对象继承。如果此方法在自定义对象中未被覆盖，toString() 返回 "[object type]"，其中 type 是对象的类型。
 
-[call()](https://www.w3school.com.cn/js/js_function_call.asp)用来改变 this 指向，能够使用属于另一个对象的方法。更多关于 call() 的用法可以看[这里>>>](https://segmentfault.com/a/1190000018270750)
+[call()](https://www.w3school.com.cn/js/js_function_call.asp)用来改变 this 指向，能够使用属于另一个对象的方法。
+
+> 比如对象 b 没有方法 f(), 但是对象 a 有， 就可以直接 a.f.call(b), 这样 b 就使用了 a 里边的一个方法
+
+更多关于 call() 的用法可以看[这里>>>](https://segmentfault.com/a/1190000018270750)
 
 ```js
 var a = NaN;
