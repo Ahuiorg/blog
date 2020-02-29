@@ -1,5 +1,5 @@
 ---
-title: js __proto__和prototype的区别和关系
+title: JS __proto__和prototype的区别和关系
 abbrlink: proto
 date: 2020-02-15 12:23:39
 tags: [js, 浏览器]

@@ -19,14 +19,17 @@ tags:
 5. [x] [js 中**proto**和 prototype 的区别和关系](/proto.html)
 6. [x] [判断是数组的方法](/isArray.html)
 7. [x] [原型与原型链](/1015335320.html)
+8. [x] [new 一个对象的过程](/3315289936.html)
+9. [x] [JS 函数实参转换为数组](/1882318475.html)
 
-new 一个对象的过程
+new 对象后发生的操作以及在深刻了解下作用域链，上下文，原型链
 
-数据类型判断 typeof instanceof
+数据类型判断 typeof instanceof instanceof底层原理实现
 
 this指向,箭头函数特点
 
-promise async await
+
+promise async await  promise实现n个异步函数调用
 
 script标签defer async
 
@@ -40,12 +43,9 @@ new和直接定义原始值为啥能调用方法（包装类）
 
 跨域以及使用cors浏览器需要做什么处理  为什么要跨域，为什么要有事件轮询的机制  限制了什么，主要是限制cookie
 
-promise方法及源码（手写promise的各种实现）
-
 事件轮询详细了解，（async await以及后面的顺序和promise thenconsole等的执行顺序比较，可上网搜题）以及async await实现原理
 
 Js实现bind方法实现的强大实现(要考虑很多因素)，以及实现call，apply    
-
 
 各种继承方案（主要是红宝书里的）
 
@@ -53,15 +53,11 @@ Js实现bind方法实现的强大实现(要考虑很多因素)，以及实现cal
 
 （cookie的数据是服务端返回后通过什么存到浏览器的，然后跨域会到服务器么，（分两个阶段）， cookie知多少包括用法，特性，domain和基本封装）
 
-instanceof底层原理实现
-
 防止js攻击，xss crfs知多少
 
 手写一个尽量多功能的webpack（快手问的QAQ）
 
-promise实现n个异步函数调用
-
-实现i同时等于1  2   3的那个可以用object.definePototype重写get函数i++实现
+实现i同时等于 1 2 3 的那个可以用object.definePototype重写get函数i++实现
 
 预编译以及变量声明提升函数提升等
 
@@ -69,10 +65,7 @@ Websocket
 
 对浏览器兼容性的理解和方法或者做过哪些兼容性处理
 
-new 对象后发生的操作以及在深刻了解下作用域链，上下文，原型链
-
 正则表达式匹配（转换时间，验证手机号等）
-
 
 ### JS ES6
 1. [ ] typeof null undefined NaN依次返回什么
