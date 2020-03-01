@@ -2,7 +2,7 @@
 title: "JS判断一个变量是否是数组"
 abbrlink: isArray
 date: 2020-01-30 12:23:45
-tags: [js, 浏览器]
+tags: [js,web,浏览器]
 categories: 面试
 ---
 

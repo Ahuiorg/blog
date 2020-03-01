@@ -2,7 +2,8 @@
 title: JS 数据类型你应该知道的可不止这些
 abbrlink: 1405041715
 date: 2020-02-28 18:26:44
-tags:
+tags: [js,web,浏览器]
+categories: 面试
 ---
 
 ### 基本数据类型

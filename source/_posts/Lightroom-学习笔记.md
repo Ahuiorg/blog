@@ -2,7 +2,8 @@
 title: Lightroom 学习笔记
 abbrlink: 3725880038
 date: 2020-02-14 22:16:26
-tags:
+tags: [lightroom]
+categories: 摄影
 ---
 
 课程资源: [秋凉 LightRoom4 教学视频](http://qiuliang.com/lightroom4/index.html)

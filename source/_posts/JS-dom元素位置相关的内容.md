@@ -2,7 +2,8 @@
 title: JS dom元素位置相关的内容
 abbrlink: 880232555
 date: 2020-02-27 22:22:35
-tags:
+tags: [js,web,浏览器]
+categories: 面试
 ---
 
 offsetWidth: 返回元素的宽度（包括元素宽度 + 内边距 + 边框，不包括外边距）

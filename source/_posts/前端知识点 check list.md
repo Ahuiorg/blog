@@ -16,18 +16,13 @@ tags:
 2. [x] [JS数据类型 基本数据类型和复杂类型的区别](/1405041715.html)
 3. [x] [判断一个变量是否是数组](/isArray.html)
 4. [x] [js prototype的理解](/prototype.html)
-5. [x] [js 中**proto**和 prototype 的区别和关系](/proto.html)
+5. [x] [js 中`__proto__`和 `prototype` 的区别和关系](/proto.html)
 6. [x] [判断是数组的方法](/isArray.html)
 7. [x] [原型与原型链](/1015335320.html)
 8. [x] [new 一个对象的过程](/3315289936.html)
 9. [x] [JS 函数实参转换为数组](/1882318475.html)
-
-new 对象后发生的操作以及在深刻了解下作用域链，上下文，原型链
-
-数据类型判断 typeof instanceof instanceof底层原理实现
-
-this指向,箭头函数特点
-
+10. [x] [typeof instanceof 底层原理实现](/3369490582.html)
+11. [ ] this指向,箭头函数特点
 
 promise async await  promise实现n个异步函数调用
 

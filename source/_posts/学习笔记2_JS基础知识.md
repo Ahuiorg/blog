@@ -2,7 +2,7 @@
 title: 学习笔记2 JS基础知识
 abbrlink: 1015335320
 date: 2020-02-18 12:14:32
-tags: [js]
+tags: [js, web]
 categories: learning notes
 ---
 

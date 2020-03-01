@@ -2,7 +2,7 @@
 title: JS prototype
 abbrlink: prototype
 date: 2020-02-29 01:59:58
-tags: [js, 浏览器]
+tags: [js,web,浏览器]
 categories: 面试
 ---
 

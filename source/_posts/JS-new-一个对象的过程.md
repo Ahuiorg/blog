@@ -2,12 +2,16 @@
 title: JS new 一个对象的过程
 abbrlink: 3315289936
 date: 2020-02-29 19:36:50
-tags:
+tags: [js,web,浏览器]
+categories: 面试
 ---
 
 首先让我回忆一下创建对象的三种方法
 
 1. 单休模式
+
+<!-- more -->
+
 ```js
 const Person  = {
   name: "angelee",
