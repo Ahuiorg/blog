@@ -3,16 +3,18 @@ title: 前端知识点 check list
 abbrlink: web
 date: 2020-01-14 18:32:15
 top: true
-tags:
+tags: [web]
+categories: [前端基础]
 ---
 
 ## Don't be anxious, just do it.
-
+<!--  -->
 <!-- more -->
 
 ### JS
-
+x
 1. [x] [浏览器缓存](/cache.html)
+2. [x] 性能优化 地址栏输完 url， 回车之后，浏览器做了哪些工作
 2. [x] [JS数据类型 基本数据类型和复杂类型的区别](/1405041715.html)
 3. [x] [判断一个变量是否是数组](/isArray.html)
 4. [x] [js prototype的理解](/prototype.html)
@@ -22,54 +24,23 @@ tags:
 8. [x] [new 一个对象的过程](/3315289936.html)
 9. [x] [JS 函数实参转换为数组](/1882318475.html)
 10. [x] [typeof instanceof 底层原理实现](/3369490582.html)
-11. [ ] this指向,箭头函数特点
-
-promise async await  promise实现n个异步函数调用
-
-script标签defer async
-
-let、const和var区别
-
-axois实现原理
-
-new和直接定义原始值为啥能调用方法（包装类）
-
-对象以及数组遍历的方法，分别怎么用的，什么原理（想要for of能遍历原型上的东西，可以用iterator）
-
-跨域以及使用cors浏览器需要做什么处理  为什么要跨域，为什么要有事件轮询的机制  限制了什么，主要是限制cookie
-
-事件轮询详细了解，（async await以及后面的顺序和promise thenconsole等的执行顺序比较，可上网搜题）以及async await实现原理
-
-Js实现bind方法实现的强大实现(要考虑很多因素)，以及实现call，apply    
-
-各种继承方案（主要是红宝书里的）
-
-三次握手，四次挥手详细了解，对https的了解  cookie和session区别
-
-（cookie的数据是服务端返回后通过什么存到浏览器的，然后跨域会到服务器么，（分两个阶段）， cookie知多少包括用法，特性，domain和基本封装）
-
-防止js攻击，xss crfs知多少
-
-手写一个尽量多功能的webpack（快手问的QAQ）
-
-实现i同时等于 1 2 3 的那个可以用object.definePototype重写get函数i++实现
-
-预编译以及变量声明提升函数提升等
-
-Websocket
-
-对浏览器兼容性的理解和方法或者做过哪些兼容性处理
-
-正则表达式匹配（转换时间，验证手机号等）
-
-### JS ES6
-1. [ ] typeof null undefined NaN依次返回什么
-2. [ ] let const var
+11. [x] [this指向,箭头函数特点](/3915840815.html)
+<!-- 12. [ ] call apply bind 的区别 bind方法的实现 -->
+12. 事件轮询, promise, async await
+5. [ ] Promisetry产生的初衷 可以用catch吗 [什么是Promise.try](https://segmentfault.com/a/1190000018586947)
+13. script 标签 defer async
+14. axois实现原理
+15. 对象、数组、map、set，等遍历的方法，分别怎么用的，什么原理（想要for of能遍历原型上的东西，可以用iterator）
+16. 跨域以及使用cors浏览器需要做什么处理  为什么要跨域，为什么要有事件轮询的机制  限制了什么，主要是限制cookie
+17. 各种继承方案（主要是红宝书里的）
+18. 三次握手，四次挥手详细了解，对https的了解
+19. cookie和session区别（cookie的数据是服务端返回后通过什么存到浏览器的，然后跨域会到服务器么，（分两个阶段）， cookie知多少包括用法，特性，domain和基本封装）
+20. 防止js攻击，xss crfs知多少
+21. 预编译以及变量声明提升函数提升等
+22. Websocket
+23. 对浏览器兼容性的理解和方法或者做过哪些兼容性处理
+24. 正则表达式匹配（转换时间，验证手机号等）
 3. [ ] symbol作用
-4. [ ] map set
-5. [ ] Promisetry产生的初衷 可以用catch吗
-6. [ ] async await
-8. [ ] 说一下浏览器缓存etag和lastModified谁优先
 9. [ ] es5和es6区别
 10. [ ] es5实现es6的class
 
@@ -128,6 +99,7 @@ Websocket
 ### Webpack
 
 1. [ ] 做过哪些优化
+2. 手写一个尽量多功能的webpack（快手问的QAQ）
 
 ### h5
 1. [ ] 项目遇到的问题及解决方式

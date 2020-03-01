@@ -2,8 +2,8 @@
 title: JS 函数实参转换为数组
 abbrlink: 1882318475
 date: 2020-02-29 20:49:38
-tags: [js,web,浏览器]
-categories: 面试
+tags: [js,web,浏览器,array]
+categories: [前端基础]
 ---
 
 实际参数在函数中我们可以使用 arguments 对象获得 （注：形参可通过 arguments.callee 获得），虽然 arguments 对象与数组形似，但仍不是真正意义上的数组。

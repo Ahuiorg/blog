@@ -3,7 +3,7 @@ title: JS prototype
 abbrlink: prototype
 date: 2020-02-29 01:59:58
 tags: [js,web,浏览器]
-categories: 面试
+categories: [前端基础]
 ---
 
 在典型的面向对象的语言中，如java，都存在类（class）的概念，类就是对象的模板，对象就是类的实例。但是在Javascript语言体系中，是不存在类（Class）的概念的，javascript中不是基于‘类的'，而是通过构造函数（constructor）和原型链（prototype chains）实现的。

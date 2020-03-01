@@ -3,7 +3,7 @@ title: JS typeof instanceof 你应该知道这么多
 abbrlink: 3369490582
 date: 2020-03-01 13:05:34
 tags: [js,web,浏览器]
-categories: 面试
+categories: [前端基础]
 ---
 ### `typeof`主要是用来判断一个变量的类型
 

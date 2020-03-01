@@ -3,15 +3,13 @@ title: JS new 一个对象的过程
 abbrlink: 3315289936
 date: 2020-02-29 19:36:50
 tags: [js,web,浏览器]
-categories: 面试
+categories: [前端基础]
 ---
 
 首先让我回忆一下创建对象的三种方法
-
-1. 单休模式
-
 <!-- more -->
 
+1. 单休模式
 ```js
 const Person  = {
   name: "angelee",
@@ -88,29 +86,26 @@ console.log(ahui.name); // ahui
 
 
 1. 先创建一个空对象
-
 ```js
 const ahui = new Object()
 ```
 
-2. 把Person中的`this`指向ahui
+2. 设置原型链，把 ahui 的`__proto__`成员指向 Person 函数对象的`prototype`成员对象
+```js
+ahui.__proto__ = Person.prototype
+```
 
+3. 把Person中的`this`指向ahui
 ```js
 const result = Person.call(ahui)
 ```
 
-3. 设置原型链，把 ahui 的`__proto__`成员指向 Person 函数对象的`prototype`成员对象
-
-```js
-ahui.__proto__ = Person.prototype
-```
 4. 将初始化完毕的新对象地址，保存到等号左边的变量中。判断Person的返回值类型，如果是值类型，返回obj。如果是引用类型，就返回这个引用类型的对象
 
 
 ### 自己实现一个 new 方法
 
 第一种方法
-
 ```js
 const Person = function (name) {
   this.name = name;
@@ -148,7 +143,6 @@ console.log(angeli.name); // angeli new
 ```
 
 第二种方法
-
 ```js
 // 通过分析原生的new方法可以看出，在new一个函数的时候，
 // 会返回一个func同时在这个func里面会返回一个对象Object，
@@ -177,7 +171,6 @@ console.log(ahui.name) // ahui
 ```
 
 自测一下
-
 ```js
 
 function New(f) {
