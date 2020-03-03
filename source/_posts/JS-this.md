@@ -125,7 +125,7 @@ const ahui = {
 ahui.sayname(); // ahui
 
 const ahuisayname = ahui.sayname;
-ahuisayname(); // blobal
+ahuisayname(); // global
 ```
 
 这里的 ahui.sayname() 很好理解，肯定会打印 ahui ， 但是，当我们把 ahui.sayname 赋给一个新的变量之后， 为啥就变了呢 ？
