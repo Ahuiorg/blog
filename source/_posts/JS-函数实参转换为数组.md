@@ -10,6 +10,10 @@ categories: [前端基础]
 
 <!-- more -->
 
+### 0: [...arguments]
+
+这个方法其实是用来代替下边方法一的
+
 ### 一：通过 `Array.prototype`属性调用 slice 方法
 
 ```js
