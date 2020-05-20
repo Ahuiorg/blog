@@ -9,6 +9,11 @@ date: 2019-11-21 18:00:10
 ### 记录在使用 hexo 过程中的一些心得
 
 <!-- more -->
+### 2020年3月21日
+
+给文章添加目录
+
+修改 `themes/next/_config.yml` 下 `toc.expand_all` 为 `true`
 
 ### 2020年2月３０
 
