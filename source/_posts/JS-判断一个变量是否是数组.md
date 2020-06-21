@@ -1,10 +1,13 @@
 ---
+abbrlink: 1
+---
+---
 title: "JS判断一个变量是否是数组"
 abbrlink: isArray
 date: 2020-01-30 12:23:45
 tags: [js,web,浏览器,array]
 categories: [前端基础]
----
+--- 
 
 ### 1. isArray()
 
@@ -21,6 +24,13 @@ console.log(Array.isArray(a)); //true
 ### 2. instanceof
 
 [instanceof 运算符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上。
+
+```js
+object instanceof constructor
+object // 实例
+constructor // 构造函数
+```
+用来检测 `constructor.prototype` 是否存在于参数 object 的原型链上 (`object.__proto__/object.__proto__.__proto__.......__proto__`)
 
 ```js
 var arr = new Array();

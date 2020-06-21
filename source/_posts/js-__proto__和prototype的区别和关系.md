@@ -61,24 +61,46 @@ let ahui = new Person('ahui');
 // 现在 ahui 也是一个对象
 
 // 则 ahui 的 __proro__ 指向 Person 的原型对象 Person.prototype
-console.log(ahui.__proto__ === Person.prototype) // true
+ahui.__proto__ === Person.prototype // true
 ```
 通过上边的代码， 我们是不是可以想像一下: 
 构造函数`funcion Person ` 是不是也可以理解它是另外一个构造函数构`Funcion`造出来的 ?
+
 ```js
 function Person() {}
-console.log(Person.__proto__ === Function.prototype) // ture
+Person.__proto__ === Function.prototype // ture
 ```
+
 想像成立！！
 
 那这个时间是不是又有可能在想 `Function` 又是谁造出来的呢？ 
-```js
-console.log(Function.__proto__ === Object.prototype) // false
-console.log(Function.prototype === Object.__proto__) // true
-```
-这。。。。
 
-原来这里又进入了一个新世界 。。。。
+```js
+Function.__proto__ === Function.prototype // true
+Function.prototype.__proto__ === Object.prototype  // true
+Object.prototype.__proto__ === Object.prototype  // false
+Object.prototype.__proto__ === null // true
+```
+
+再看一段
+
+```js
+Function instanceof Object // true
+Object instanceof Function // true
+Function instanceof Function // true
+Object instanceof Object // ture
+```
+instanceof  左边操作数的__proto__原型链上是否包括右边操作数的prototype
+
+```js
+Object.__proto__ === Function.prototype  // true
+Function.__proto__ === Object.prototype // false
+Function.__proto__.__proto__ === Object.prototype  // true
+
+Object.__proto__ === Object.prototype // false
+Object.__proto__.__proto__ === Object.prototype // true
+```
+是不是有点意思 ？？？
 
 参考下面文档：
 
