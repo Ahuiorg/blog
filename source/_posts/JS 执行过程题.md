@@ -147,3 +147,52 @@ console.log(4);
 // 1 4 3 2
 ```
 > 异步任务，当读取到异步任务的时候，将异步任务放置到Event table（事件表格）中，当满足某种条件或者说指定事情完成了（这里的是时间分别是达到了0ms和1000ms）当指定事件完成了才从Event table中注册到Event Queue（事件队列），当同步事件完成了，便从Event Queue中读取事件执。（因为3的事情先完成了，所以先从Event table中注册到Event Queue中，所以先执行的是3而不是在前面的2）
+
+### `forEach` VS `for` & `for of`
+
+```js
+const list = [1, 2, 3]
+const square = num => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(num * num)
+    }, 1000)
+  })
+}
+
+function test() {
+  list.forEach(async x=> {
+    const res = await square(x)
+    console.log(res)
+  })
+}
+test()
+
+// 一秒后一次打印出 1， 4， 9
+```
+> `forEach` 是不能阻塞的，默认是请求并行发起
+
+```js
+const list = [1, 2, 3]
+const square = (num) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(num * num)
+    }, 1000)
+  })
+}
+
+async function test() {
+//   for (let i = 0; i < list.length; i++) {
+//     const res = await square(list[i])
+//     console.log(res)
+//   }
+  for(let i of list) {
+    const res = await square(i)
+    console.log("res: ", res);
+  }
+}
+test()
+// 一秒之后打印1， 再过一秒打印4， 再过一秒打印9
+```
+> `for` 跟 `for of` 是会阻塞的
