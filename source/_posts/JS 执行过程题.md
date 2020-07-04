@@ -2,7 +2,7 @@
 title: JS 执行过程题
 abbrlink: 1491244432
 date: 2020-06-16 18:22:47
-tags:
+tags: [js, js算法]
 ---
 
 执行过程，就是要理解js的执行上下文
@@ -133,6 +133,30 @@ console.log(7);
 > log(5) 跟 log(6) 的时候， 这里因为上 log(4)那个 promise 并没有完成(resolve 跟 reject 都没有被调用)， 所以 5， 6 是不会打印出来的
 > js 执行的时候，是单线程的，通过事件轮循实现异步，每一次轮循都会把异步事件添加到队列中，这里的事件分为微任务(promise)跟宏任务(script, setTimeout, setInterval)，一个轮循结束之后，先执行微任务，再执行宏任务
 
+
+```js
+new Promise((resolve, reject) => {
+  console.log(1)
+  reject()
+})
+  .then(() => {
+    console.log(2)
+  }, () => {
+    console.log(3)
+  })
+  .catch(() => {
+    console.log(4);
+    return Promise.reject()
+  })
+  .then(() => {
+    console.log(5);
+  })
+  .catch(() => {
+    console.log(6);
+  })
+```
+
+
 ### 异步任务分析
 
 ```js
@@ -196,3 +220,34 @@ test()
 // 一秒之后打印1， 再过一秒打印4， 再过一秒打印9
 ```
 > `for` 跟 `for of` 是会阻塞的
+
+### 普通函数跟箭头函数的区别
+
+定义好的obj， 分别执行 obj.f1() obj.f2() new obj.f1() new obj.f2() 会发生什么
+
+```js
+const obj = {
+  f1: function() {
+    console.log(this);
+  },
+  f2: () => {
+    console.log(this);
+  }
+}
+obj.f1()
+obj.f2()
+new obj.f1()
+new obj.f2()
+```
+**这是一个很能考察基本功的题目**
+
+分析一下， 这里f1跟f2的区别就是，一个普通函数跟一个箭头函数的区别， 如果**真的很**了解[头函数跟普通函数的区别](/3671102502.html)， 这里还是很简单的 
+
+```
+obj.f1() 这个简单， 就是打印 obj
+obj.f2() 这里，this 肯定不是打印 obj， 但是也不是 window ！！！ 而是一个空对象
+new obj.f1() 这里 . 的执行优先级高于 new , 所以就是把 f1 这个函数当作一个构造函数， 去实例化了 f1, 所以， 这里的 this， 就是实例化之后的 f1 这个实例
+从上边就知道了，
+new obj.f2() 这个操作同样是去实例 f2 ，你是 f2 是一个箭头函数，他是不能当做构造函数的，所以这里就会报错
+
+```
