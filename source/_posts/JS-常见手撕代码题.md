@@ -359,7 +359,7 @@ console.log(c, a, b)
 // console.log(c);
 ```
 
-### 10. 实现一个PromiseLinit
+### 10. 实现一个 PromiseLinit
 
 根据 urls 数组内的 url 地址进行并发网络请求，最大并发数 maxNumber,当所有请求完毕后调用 callback 函数
 
@@ -394,7 +394,7 @@ function PromiseLinit(urls, limit, callback) {
         console.log(`${current + 1}成功结束`)
         result.push(res)
         if (current < urlsLen) {
-          next()  
+          next()
         }
       })
       .catch((err) => {
@@ -412,7 +412,6 @@ let urls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 PromiseLinit(urls, 4, (res) => {
   console.log('success: ', res)
 })
-
 ```
 
 ### 11. 求 left， right 最终宽度
@@ -551,4 +550,208 @@ let p3 = new Promise((resolve, reject) => {
 myPromiseAll([p1, p2, p3]).then((values) => {
   console.log(values) // [3, 1337, "foo"]
 })
+```
+
+### 13. 字符串排序
+
+在一个字符串数组中有红、黄、蓝三种颜色的球，且个数不相等、顺序不一致，请为该数组排序。使得排序后数组中球的顺序为:黄、红、蓝。
+
+例如：红蓝蓝黄红黄蓝红红黄红，排序后为：黄黄黄红红红红红蓝蓝蓝。
+
+```js
+let str1 = '红蓝蓝黄红黄蓝红红黄红'
+
+let obj = {红: 1, 蓝: 2, 黄: 3}
+
+let str2 = st1
+  .split('')
+  .sort((a, b) => {
+    return obj[a] - obj[b]
+  })
+  .join('')
+
+console.log(str2)
+```
+
+### 14. 数组转树，并去重
+
+如何将 [{id: 1}, {id: 2, pId: 1}, ...] 的重复数组（有重复数据）转成树形结构的数组 [{id: 1, child: [{id: 2, pId: 1}]}, ...] （需要去重）
+
+```js
+const arr = [{id: 1}, {id: 2, pId: 1}, {id: 3, pId: 2}, {id: 4}, {id: 3, pId: 2}, {id: 5, pId: 4}]
+const map = arr.reduce((res, item, curIdx) => ((res[item.id] = Object.assign({}, item)), res), {})
+
+let res = []
+for (const item of Object.values(map)) {
+  if (item.pId) {
+    const parent = map[item.pId]
+    parent.child = parent.child || []
+    parent.child.push(item)
+  } else {
+    res.push(item)
+  }
+}
+
+console.log('res: ', JSON.stringify(res))
+// [{"id":1,"child":[{"id":2,"pId":1,"child":[{"id":3,"pId":2}]}]},{"id":4,"child":[{"id":5,"pId":4}]}]
+
+// 不去重
+
+// function arrayToTree(tree, pid = 0) {
+//   return tree.filter(item => item.pid === pid).map(listItem => ({
+//     ...listItem,
+//     child: arrayToTree(tree, listItem.id)
+//   }))
+// }
+
+// console.log(arrayToTree(data));
+```
+
+### 15. 树转数组
+
+```js
+const data = [
+  {
+    id: 1,
+    pid: 0,
+    name: 'no.1',
+    children: [
+      {
+        id: 2,
+        pid: 1,
+        name: 'no.2',
+        children: [
+          {id: 6, pid: 2, name: 'no.6'},
+          {id: 7, pid: 2, name: 'no.7'},
+          {id: 8, pid: 2, name: 'no.8'},
+        ],
+      },
+      {
+        id: 3,
+        pid: 1,
+        name: 'no.3',
+        children: [
+          {id: 9, pid: 3, name: 'no.9'},
+          {id: 10, pid: 3, name: 'no.10'},
+          {id: 11, pid: 3, name: 'no.11'},
+        ],
+      },
+      {
+        id: 4,
+        pid: 1,
+        name: 'no.4',
+        children: [
+          {id: 12, pid: 4, name: 'no.12'},
+          {
+            id: 13,
+            pid: 4,
+            name: 'no.13',
+            children: [{id: 14, pid: 13, name: 'no.14'}],
+          },
+        ],
+      },
+      {id: 5, pid: 1, name: 'no.5'},
+    ],
+  },
+]
+
+function treeToArray(list, newArray = []) {
+  list.forEach((item) => {
+    if (item.children) {
+      const tempItem = item.children
+      delete item.children
+      newArray.push(item)
+      if (tempItem.length > 0) {
+        return treeToArray(tempItem, newArray)
+      }
+    }
+    newArray.push(item)
+  })
+
+  return newArray
+}
+
+console.log('newArray: ', treeToArray(data))
+```
+
+### 16. 斐波那契数列
+
+给一个 n 得到一个斐波那契数列数组
+
+```js
+let fibonacci = (function (n) {
+  var cache = {}
+
+  return function (n) {
+    if (n === 1 || n === 2) return 1
+    if (cache[n]) return cache[n]
+    return (cache[n] = fibonacci(n - 1) + fibonacci(n - 2))
+  }
+})()
+
+function getFibArray(n) {
+  let res = []
+  for (let i = 1; i <= n; i++) {
+    res.push(fibonacci(i))
+  }
+  return res
+}
+
+let t1 = new Date().getTime()
+
+console.log(getFibArray(33))
+
+let t2 = new Date().getTime()
+
+console.log(t2 - t1)
+// 这里的时间是方便对比加上cache跟没加cache里的区别
+// 加 catch 1
+// 不加catch 2048
+```
+
+### 17. 深拷贝
+
+```js
+function deepClone(obj) {
+  if (typeof obj === 'object') {
+    const temp = Array.isArray(obj) ? [] : {}
+
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        if (typeof obj[key] === 'object') {
+          temp[key] = deepClone(obj[key])
+        } else {
+          temp[key] = obj[key]
+        }
+      }
+    }
+
+    return temp
+  }
+  return obj
+}
+
+let ahui = {
+  name: 'ahui',
+  age: '18',
+  city: ['泰国', '新加坡', '印度尼西亚'],
+  sayname: function () {
+    return this.name
+  },
+  saycity: function () {
+    return this.city
+  },
+}
+
+let angeli = deepClone(ahui)
+
+angeli.name = 'angeli'
+
+console.log(ahui.sayname())
+console.log(angeli.sayname())
+
+angeli.city = ['深圳', '娄底']
+
+console.log(ahui.saycity())
+console.log(angeli.saycity())
 ```
