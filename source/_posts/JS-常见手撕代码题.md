@@ -755,3 +755,27 @@ angeli.city = ['深圳', '娄底']
 console.log(ahui.saycity())
 console.log(angeli.saycity())
 ```
+
+### 数组求子集
+`[1, 2, 3]` 的所有子集是： `[[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]`
+
+```js
+let arr = [1, 2, 3]
+
+function allSubsets(a) {
+  let res = [[]]
+
+  for (let i = 0; i < a.length; i++) {
+    const tempRes = res.map(subset => {
+      const item = subset.concat([])
+      item.push(a[i])
+      return item
+    })
+    res = res.concat(tempRes)
+  }
+
+  return res
+}
+
+console.log(allSubsets(arr));
+```
