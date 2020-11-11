@@ -779,3 +779,5 @@ function allSubsets(a) {
 
 console.log(allSubsets(arr));
 ```
+
+### 二分法查数
