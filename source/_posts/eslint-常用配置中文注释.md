@@ -1,4 +1,5 @@
 ---
+uuid: 49c30af4-120c-11ed-aacc-b11deac0aae6
 title: eslint 常用配置中文注释
 abbrlink: 4069831407
 date: 2020-02-24 14:03:32

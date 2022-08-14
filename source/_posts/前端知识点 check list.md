@@ -1,4 +1,5 @@
 ---
+uuid: 49c331f3-120c-11ed-aacc-b11deac0aae6
 title: 前端知识点 check list
 abbrlink: web
 date: 2020-01-14 18:32:15

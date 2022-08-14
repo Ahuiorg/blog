@@ -5,17 +5,18 @@
 # Site
 title: .org Blog
 subtitle: Penghui's Blog
-description: 30岁才开始写的博客
-keywords: "辉博客,阿辉博客,阿辉的个人博客,ES6,JS,WEB,web,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验"
+description: 记录学习 记录生活 记录成长
+keywords: '辉博客,阿辉博客,阿辉的个人博客,ES6,JS,WEB,web,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验'
 author: 李鹏辉
 language: zh-CN
+email: ahuinet@163.com
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://didiorg.com
 root: /
-permalink: :abbrlink.html # 生成唯一链接
+permalink: /:abbrlink/ # 生成唯一链接
 abbrlink:
   alg: crc32 # 算法：crc16(default) and crc32
   rep: dec # 进制：dec(default) and hex
@@ -51,7 +52,7 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ""
+  path: ''
   per_page: 10
   order_by: -date
 
@@ -73,9 +74,7 @@ per_page: 10
 pagination_dir: page
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: next
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -83,24 +82,3 @@ deploy:
   type: git
   repo: https://github.com/Ahuiorg/ahuiorg.github.io.git
   branch: master
-
-# RSS
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content:
-  content_limit:
-  content_limit_delim: " "
-
-# search
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
-
-# pv uv
-footer:
-  counter: true

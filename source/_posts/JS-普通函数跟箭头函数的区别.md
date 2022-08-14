@@ -1,4 +1,5 @@
 ---
+uuid: 49c30ae9-120c-11ed-aacc-b11deac0aae6
 title: JS 普通函数跟箭头函数的区别
 abbrlink: 3671102502
 date: 2020-07-03 23:31:38

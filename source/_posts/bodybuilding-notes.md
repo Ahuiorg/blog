@@ -1,4 +1,5 @@
 ---
+uuid: 49c30aea-120c-11ed-aacc-b11deac0aae6
 title: bodybuilding notes
 tags: 健身
 categories: fit

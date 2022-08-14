@@ -1,4 +1,5 @@
 ---
+uuid: 49c331f6-120c-11ed-aacc-b11deac0aae6
 title: 学习笔记2 JS基础知识
 abbrlink: 1015335320
 date: 2020-02-18 12:14:32

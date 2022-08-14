@@ -1,4 +1,5 @@
 ---
+uuid: 49c331f0-120c-11ed-aacc-b11deac0aae6
 title: webpack 的详细执行过程
 tags: webpack
 categories: tools

@@ -1,4 +1,5 @@
 ---
+uuid: 49c30aee-120c-11ed-aacc-b11deac0aae6
 title: js Promise / Generator / await async
 abbrlink: 464566509
 date: 2020-03-03 23:02:31

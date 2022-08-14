@@ -1,4 +1,5 @@
 ---
+uuid: 49c30ae8-120c-11ed-aacc-b11deac0aae6
 title: JS 数据类型你应该知道的可不止这些
 abbrlink: 1405041715
 date: 2020-02-28 18:26:44

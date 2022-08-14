@@ -1,4 +1,5 @@
 ---
+uuid: 49c30aec-120c-11ed-aacc-b11deac0aae6
 title: hello world
 tags: hello
 abbrlink: 222957957
