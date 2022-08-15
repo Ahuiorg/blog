@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Ahui Blog
-subtitle: Penghui's Blog
+title: Lee JS
+subtitle: Lee Blog
 description: 学习 生活 成长
 keywords: '辉博客,阿辉博客,阿辉的个人博客,ES6,JS,WEB,web,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验'
 author: 李鹏辉
@@ -14,7 +14,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://didiorg.com
+url: https://leejs.cn/
 root: /
 permalink: /:abbrlink/ # 生成唯一链接
 abbrlink:
