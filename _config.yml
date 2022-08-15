@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: .org Blog
+title: Ahui Blog
 subtitle: Penghui's Blog
-description: 记录学习 记录生活 记录成长
+description: 学习 生活 成长
 keywords: '辉博客,阿辉博客,阿辉的个人博客,ES6,JS,WEB,web,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验'
 author: 李鹏辉
 language: zh-CN
@@ -80,5 +80,5 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/Ahuiorg/ahuiorg.github.io.git
-  branch: master
+  repo: git@github.com:/Ahuiorg/ahuiorg.github.io.git,master
+  coding: git@github.com:Ahuiorg/ahuiorg.github.io.git,master
