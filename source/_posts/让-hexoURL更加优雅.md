@@ -1,5 +1,4 @@
 ---
-uuid: 49c331f9-120c-11ed-aacc-b11deac0aae6
 title: 让 hexo URL更加优雅
 abbrlink: 3651303969
 date: 2020-01-14 21:37:19

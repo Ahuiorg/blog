@@ -2,6 +2,8 @@
 title: watch
 abbrlink: 1342917158
 date: 2022-07-12 16:41:19
+tag: vue3,watch,watchEffect
+categories: vue3
 ---
 
 ### [vue3中 watch、watchEffect区别](https://segmentfault.com/a/1190000039916178)

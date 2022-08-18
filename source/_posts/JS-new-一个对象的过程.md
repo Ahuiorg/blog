@@ -1,5 +1,4 @@
 ---
-uuid: 49c30ae0-120c-11ed-aacc-b11deac0aae6
 title: JS new 一个对象的过程
 abbrlink: 3315289936
 date: 2020-02-29 19:36:50

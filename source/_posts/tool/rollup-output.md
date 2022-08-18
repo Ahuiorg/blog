@@ -2,6 +2,7 @@
 title: Rollup output
 abbrlink: 3437106334
 date: 2022-07-15 10:39:12
+tag: rollup; webpack; vite
 ---
 
 ## Rollup 输出的不同格式js文件对比

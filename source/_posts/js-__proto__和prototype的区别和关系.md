@@ -1,5 +1,4 @@
 ---
-uuid: 49c30aed-120c-11ed-aacc-b11deac0aae6
 title: JS __proto__和prototype的区别和关系
 abbrlink: proto
 date: 2020-02-15 12:23:39

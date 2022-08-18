@@ -1,5 +1,4 @@
 ---
-uuid: 49c30ae7-120c-11ed-aacc-b11deac0aae6
 title: JS 常见手撕代码题
 abbrlink: 979881800
 date: 2020-06-17 22:18:36

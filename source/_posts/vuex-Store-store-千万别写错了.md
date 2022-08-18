@@ -1,5 +1,4 @@
 ---
-uuid: 49c30af6-120c-11ed-aacc-b11deac0aae6
 title: vuex Store store 千万别写错了
 tags: vuex
 categories: bugfix

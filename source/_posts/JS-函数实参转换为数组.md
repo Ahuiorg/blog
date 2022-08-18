@@ -1,5 +1,4 @@
 ---
-uuid: 49c30ae3-120c-11ed-aacc-b11deac0aae6
 title: JS 函数实参转换为数组
 abbrlink: 1882318475
 date: 2020-02-29 20:49:38

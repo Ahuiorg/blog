@@ -1,5 +1,4 @@
 ---
-uuid: 49c30ae1-120c-11ed-aacc-b11deac0aae6
 title: JS prototype
 abbrlink: prototype
 date: 2020-02-29 01:59:58

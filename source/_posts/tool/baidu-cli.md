@@ -1,8 +1,8 @@
 ---
-uuid: 851a1520-120c-11ed-b6ad-296d47d41d06
-title: cli
+title: Baidu serverless cli
 abbrlink: 1224102205
 date: 2022-07-24 23:47:13
+tag: serverless; cli
 ---
 
 工具安装

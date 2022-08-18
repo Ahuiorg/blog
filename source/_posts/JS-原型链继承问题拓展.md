@@ -1,5 +1,4 @@
 ---
-uuid: 49c30ae5-120c-11ed-aacc-b11deac0aae6
 title: JS 原型链继承问题拓展
 abbrlink: 3012898819
 date: 2020-03-13 22:35:34

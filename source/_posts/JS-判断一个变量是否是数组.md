@@ -1,5 +1,4 @@
 ---
-uuid: 49c30ae6-120c-11ed-aacc-b11deac0aae6
 title: JS判断一个变量是否是数组
 abbrlink: isArray
 date: 2020-01-30 12:23:45

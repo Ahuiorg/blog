@@ -1,5 +1,4 @@
 ---
-uuid: 49c331f1-120c-11ed-aacc-b11deac0aae6
 title: vue常见API原理分析
 abbrlink: 3258801602
 date: 2020-07-04 10:14:41

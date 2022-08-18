@@ -1,5 +1,4 @@
 ---
-uuid: 49c30aeb-120c-11ed-aacc-b11deac0aae6
 title: hello hexo
 tags: hexo
 categories: tools

@@ -1,5 +1,4 @@
 ---
-uuid: 49c30ae4-120c-11ed-aacc-b11deac0aae6
 title: JS typeof instanceof 你应该知道这么多
 abbrlink: 3369490582
 date: 2020-03-01 13:05:34

@@ -1,5 +1,4 @@
 ---
-uuid: 49c30af3-120c-11ed-aacc-b11deac0aae6
 title: react render 原理
 tags:
   - react
