@@ -2,7 +2,7 @@
 title: Baidu serverless cli
 abbrlink: 1224102205
 date: 2022-07-24 23:47:13
-tag: serverless; cli
+tag: serverless
 ---
 
 工具安装

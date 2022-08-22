@@ -1,8 +1,6 @@
 ---
 title: react render 原理
 tags:
-  - react
-  - js
 abbrlink: 2202868307
 date: 2020-02-20 12:31:43
 ---
