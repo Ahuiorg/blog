@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "hexo-abbrlink": "^2.2.1",
+    "hexo-deployer-git": "^3.0.0",
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^2.1.0"
   },
