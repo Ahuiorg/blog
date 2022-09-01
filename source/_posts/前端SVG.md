@@ -1,5 +1,5 @@
 ---
-title: 前端SVG
+title: SVG 完全讲解
 abbrlink: 4000f72f
 date: 2022-08-30 14:42:13
 tags: svg

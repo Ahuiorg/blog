@@ -1,5 +1,5 @@
 ---
-title: 前端知识点 check list
+title: 知识点 check list
 abbrlink: web
 date: 2020-01-14 18:32:15
 top: true
