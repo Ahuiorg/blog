@@ -137,17 +137,25 @@ cover:
     - https://images-origin.wallwiz.link/588609686e9f6a00013b8c2f_1
     - https://images-origin.wallwiz.link/590bc66690c79d0001e9cbad_1
     - https://images-origin.wallwiz.link/590bca5f90c79d0001e9cbff_1
-    # - https://fastly.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-1.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-2.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-3.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-4.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-5.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-6.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-7.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-9.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-8.png
-    # - https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/material-10.png
+    - https://images-origin.wallwiz.link/58860ea5bcf65400017a54f0_1
+    - https://images-origin.wallwiz.link/58860ea56e9f6a00013b93a3_1
+    - https://images-origin.wallwiz.link/58860e96dc1d3f00010ad1e2_1
+    - https://images-origin.wallwiz.link/58860ead6e9f6a00013b93b1_1
+    - https://images-origin.wallwiz.link/58860ebadc1d3f00010ad215_1
+    - https://images-origin.wallwiz.link/58860b66bcf65400017a5089_1
+    - https://images-origin.wallwiz.link/58860ba7dc1d3f00010acdef_1
+    - https://images-origin.wallwiz.link/58860adbdc1d3f00010accc9_1
+    - https://images-origin.wallwiz.link/58860b456e9f6a00013b8f0f_1
+    - https://images-origin.wallwiz.link/58860b88dc1d3f00010acdc1_1
+    - https://images-origin.wallwiz.link/58860b9a6e9f6a00013b8f89_1
+    - https://images-origin.wallwiz.link/58860cbe6e9f6a00013b9112_1
+    - https://images-origin.wallwiz.link/59c13437ccb8f80001ef65ea_1
+    - https://images-origin.wallwiz.link/59c13468ccb8f80001ef663f_1
+    - https://images-origin.wallwiz.link/59c13323c6a7580001cc9bfd_1
+    - https://images-origin.wallwiz.link/59c1325eccb8f80001ef5d43_1
+    - https://images-origin.wallwiz.link/59c12ed68ac7580001ce9ef8_1
+    - https://images-origin.wallwiz.link/59c1366e8ac7580001cec0fd_1
+    - https://images-origin.wallwiz.link/5976161269f78700012df74f_1
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
