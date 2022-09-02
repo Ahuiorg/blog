@@ -1,5 +1,5 @@
 ---
-title: vue 父子组件的生命周期顺序
+title: vue2 父子组件的生命周期顺序
 abbrlink: 677899705
 date: 2020-07-04 00:18:42
 tags: [vue, vue 原理]

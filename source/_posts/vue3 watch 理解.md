@@ -1,8 +1,8 @@
 ---
-title: watch
+title: vue3 watch 理解
 abbrlink: 1342917158
 date: 2022-07-12 16:41:19
-tag: vue3,watch,watchEffect
+tag: [vue3,watch,watchEffect]
 categories: vue3
 ---
 

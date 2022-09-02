@@ -1,5 +1,5 @@
 ---
-title: TS入门
+title: TS 入门学习
 abbrlink: 2742505907
 date: 2022-08-18 14:06:10
 tags: TypeScript

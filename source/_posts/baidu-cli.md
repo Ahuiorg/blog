@@ -1,5 +1,5 @@
 ---
-title: Baidu serverless cli
+title: 百度 serverless cli 试用
 abbrlink: 1224102205
 date: 2022-07-24 23:47:13
 tag: serverless
