@@ -13,8 +13,8 @@ date: 2022-09-02 11:19:43
 
 ## 开始
 
-- [ ] [简介](https://cn.vuejs.org/guide/introduction.html)
-- [ ] [快速上手](https://cn.vuejs.org/guide/quick-start.html)
+- [x] [简介](https://cn.vuejs.org/guide/introduction.html)
+- [x] [快速上手](https://cn.vuejs.org/guide/quick-start.html)
 
 ## 基础
 
