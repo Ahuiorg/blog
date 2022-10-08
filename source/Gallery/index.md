@@ -3,7 +3,7 @@ title: Gallery
 date: 2019-10-24 22:23:55
 comments: false
 reward: false
-description: 圖庫
+description: 图库
 aside: false
 top_img: https://fastly.jsdelivr.net/gh/jerryc127/CDN/Photo/photo.jpg
 ---
