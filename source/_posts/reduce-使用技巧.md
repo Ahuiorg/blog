@@ -35,7 +35,7 @@ reduce 函数可以根据需要进行累加、过滤、分组、映射等操作�
 
 ### 计算数组中每个元素出现的次数
 
-```
+```typescript
 const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
 const count = fruits.reduce((accumulator, currentValue) => {
   accumulator[currentValue] = (accumulator[currentValue] || 0) + 1;
@@ -46,7 +46,7 @@ console.log(count); // Output: { apple: 3, banana: 2, orange: 1 }
 
 ### 拍平嵌套数组
 
-```
+```typescript
 const nestedArray = [[1, 2], [3, 4], [5, 6]];
 const flattenedArray = nestedArray.reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
 console.log(flattenedArray); // Output: [1, 2, 3, 4, 5, 6]
@@ -54,7 +54,7 @@ console.log(flattenedArray); // Output: [1, 2, 3, 4, 5, 6]
 
 ### 按条件分组
 
-```
+```js
 const people = [
   { name: 'Alice', age: 25 },
   { name: 'Bob', age: 30 },
@@ -80,7 +80,7 @@ console.log(groupedPeople);
 
 ### 将多个数组合并为一个对象
 
-```
+```js
 const keys = ['name', 'age', 'gender'];
 const values = ['Alice', 25, 'female'];
 const person = keys.reduce((accumulator, currentValue, index) => {
@@ -92,7 +92,7 @@ console.log(person); // Output: { name: 'Alice', age: 25, gender: 'female' }
 
 ### 将字符串转换为对象
 
-```
+```javascript
 const str = 'key1=value1&key2=value2&key3=value3';
 const obj = str.split('&').reduce((accumulator, currentValue) => {
   const [key, value] = currentValue.split('=');
@@ -105,7 +105,7 @@ console.log(obj);
 
 ### 将对象转换为查询字符串
 
-```
+```js
 const params = { foo: "bar", baz: 42 };
 const queryString = Object.entries(params).reduce((acc, [key, value]) => {
   return `${acc}${key}=${value}&`;
@@ -115,7 +115,7 @@ console.log(queryString); // "?foo=bar&baz=42"
 
 ### 打印斐波那契数列
 
-```
+```js
 const fibonacci = n => {
   return [...Array(n)].reduce((accumulator, currentValue, index) => {
     if (index < 2) {
@@ -131,7 +131,7 @@ console.log(fibonacci(10)); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 ### 检查字符串是否是回文字符串
 
-```
+```js
 const str = 'racecar';
 const isPalindrome = str.split('').reduce((accumulator, currentValue, index, array) => {
   return accumulator && currentValue === array[array.length - index - 1];
@@ -141,7 +141,7 @@ console.log(isPalindrome); // Output: true
 
 ### 检查括号是否匹配
 
-```
+```js
 const str = "(()()())";
 const balanced = str.split("").reduce((acc, cur) => {
   if (cur === "(") {
@@ -156,7 +156,7 @@ console.log(balanced); // true
 
 ### 递归获取对象属性
 
-```
+```js
 const user = {
   info: {
     name: "Jason",
@@ -177,7 +177,7 @@ get(user, "info.address.abc", "default"); // default
 
 可以通过手写一个简单的 `reduce` 函数来更好地理解它的实现原理：
 
-```
+```js
 function myReduce(arr, callback, initialValue) {
   let accumulator = initialValue === undefined ? arr[0] : initialValue;
   for (let i = initialValue === undefined ? 1 : 0; i < arr.length; i++) {
