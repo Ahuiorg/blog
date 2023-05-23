@@ -1,0 +1,262 @@
+---
+title: vue 常见的坑
+date: 2023-05-23 17:49:22
+tags:
+---
+
+Vue 3已经稳定了相当长一段时间了。许多代码库都在生产环境中使用它，其他人最终都将不得不迁移到Vue 3。我现在有机会使用它并记录了我的错误，下面这些错误你可能想要避免。
+
+## 使用Reactive声明原始值
+
+数据声明在过去都是非常直接的，但是现在有很多帮助函数供我们使用。目前的规则是：
+
+- 使用`reactive`声明`Object, Array, Map, Set`
+- 使用`ref`声明`String, Number, Boolean`
+
+为一个原始值使用`reactive`会返回一个警告，并且该值不会成为可响应式数据。
+
+```
+/* DOES NOT WORK AS EXPECTED */
+<script setup>
+import { reactive } from "vue";
+
+const count = reactive(0);
+</script>
+```
+
+> [Vue warn]: value cannot be made reactive
+
+矛盾的是，另一种方式是可行的。例如，使用`ref`来声明一个`Array`会在内部调用`reactive`。
+
+## 解构响应式数据
+
+假设你有一个响应式对象拥有`count`属性，并且有一个按钮来递增`count`。
+
+```
+<template>
+  Counter: {{ state.count }}
+  <button @click="add">Increase</button>
+</template>
+
+<script>
+import { reactive } from "vue";
+export default {
+  setup() {
+    const state = reactive({ count: 0 });
+
+    function add() {
+      state.count++;
+    }
+
+    return {
+      state,
+      add,
+    };
+  },
+};
+</script>
+```
+
+上述逻辑相当直接，而且如预期的那样工作，但你可能会利用javascript的解构来做以下事情：
+
+```
+/* DOES NOT WORK AS EXPECTED */
+<template>
+  <div>Counter: {{ count }}</div>
+  <button @click="add">Increase</button>
+</template>
+
+<script>
+import { reactive } from "vue";
+export default {
+  setup() {
+    const state = reactive({ count: 0 });
+
+    function add() {
+      state.count++;
+    }
+
+    return {
+      ...state,
+      add,
+    };
+  },
+};
+</script>
+```
+
+代码看起来是一样的，而且根据我们以前的经验应该是可行的，但事实上，Vue的响应式跟踪是通过属性访问进行的。这意味着我们不能赋值或解构一个响应式对象，因为与第一个引用的响应式连接已经断开。这就是使用响应式帮助函数的局限性之一。
+
+## 对.value感到困惑
+
+同样的，使用`ref`的一个怪异模式可能也很难习惯。
+
+`Ref`接收一个值，并返回响应式对象。该值在对象内部的`.value`属性下可用。
+
+```
+const count = ref(0)
+
+console.log(count) // { value: 0 }
+console.log(count.value) // 0
+
+count.value++
+console.log(count.value) // 1
+```
+
+但是`ref`在模板文件中使用时会被解包，并且不需要`.value`。
+
+```
+<script setup>
+import { ref } from 'vue'
+
+const count = ref(0)
+
+function increment() {
+  count.value++
+}
+</script>
+
+<template>
+  <button @click="increment">
+    {{ count }} // no .value needed
+  </button>
+</template>
+```
+
+但是要小心了！解包只在顶级属性中生效。下面的代码片段会生成`[object Object]`。
+
+```
+// DON'T DO THIS
+<script setup>
+import { ref } from 'vue'
+
+const object = { foo: ref(1) }
+
+</script>
+
+<template>
+  {{ object.foo + 1 }}  // [object Object]
+</template>
+```
+
+正确地使用`.value`需要时间。尽管某些时候我会忘记如何使用，但是使用它的频率越来越高。
+
+## 触发事件
+
+自从Vue的最初发布以来，子组件就可以与父组件使用`emit`来通信。你只需要添加自定义事件监听器来监听一个事件。
+
+```
+// 子组件
+this.$emit('my-event')
+
+// 父组件
+<my-component @my-event="doSomething" />
+```
+
+现在，`emit`需要使用`defineEmits`来进行声明。
+
+```
+<script setup>
+const emit = defineEmits(['my-event'])
+emit('my-event')
+</script>
+```
+
+另一件要记住的事情是，`defineEmits`和`defineProps`都不需要被导入。它们在使用`script setup`时自动可用。
+
+```
+<script setup>
+const props = defineProps({
+  foo: String
+})
+
+const emit = defineEmits(['change', 'delete'])
+// setup code
+</script>
+```
+
+最后，由于事件现在必须被声明，所以不需要使用`.native`修饰符，事实上它已经被移除了。
+
+## 声明附加选项
+
+Options API方法有几个属性在`script setup`中是不被支持的。
+
+- `name`
+- `inheritAttrs`
+- 插件或库所需的自定义选项
+
+解决办法是按照`script setup`RFC的**定义**[1]，在同一个组件中设置两个不同的脚本。
+
+```
+<script>
+  export default {
+    name: 'CustomName',
+    inheritAttrs: false,
+    customOptions: {}
+  }
+</script>
+
+<script setup>
+  // script setup logic
+</script>
+```
+
+## 使用响应式转换
+
+Reactivity Transform是Vue 3的一个**实验性但有争议的功能**[2]，目的是简化组件的声明方式。它的想法是利用编译时的转换来自动解包一个`ref`，并使`.value`过时。但现在它被放弃了，并将在Vue 3.3中被删除。它仍然可以作为一个包使用，但由于它不是Vue核心的一部分，所以最好不要在它身上投入时间。
+
+## 定义异步组件
+
+以前的异步组件是通过将其包含在一个函数中来声明的。
+
+```
+const asyncModal = () => import('./Modal.vue')
+```
+
+从 Vue 3开始，异步组件需要使用`defineAsyncComponent`帮助函数来显式地定义。
+
+```
+import { defineAsyncComponent } from 'vue'
+
+const asyncModal = defineAsyncComponent(() => import('./Modal.vue'))
+```
+
+## 在模板中使用多余的包裹元素
+
+在Vue 2中，组件模板需要一个单一的根元素，这有时会引入不必要的包裹元素。
+
+```
+<!-- Layout.vue -->
+<template>
+  <div>
+    <header>...</header>
+    <main>...</main>
+    <footer>...</footer>
+  </div>
+</template>
+```
+
+现在不再需要这样了，因为现在支持多个根元素。🥳
+
+```
+<!-- Layout.vue -->
+<template>
+  <header>...</header>
+  <main v-bind="$attrs">...</main>
+  <footer>...</footer>
+</template>
+```
+
+## 使用错误的生命周期
+
+所有的组件生命周期事件都被重新命名，要么添加`on`前缀，要么完全改变名称。你可以在下面的图表中查看所有的变化。
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/VyEdgX6S7iaZH5LLcZQRTkYlHF5h2Nom6utp1wClpG1cwmDbO9NBAN3h41850Ax6WZbXIFaFz2viclqySLpKWKuA/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
+
+## 不看文档
+
+最后，官方文档已经进行了修改以反映新的API，并包括许多有价值的说明、指南和最佳实践。即使你是一个经验丰富的Vue 2工程师，你也一定会通过阅读文档学到一些新东西。
+
+## 总结
+
+每个框架都有一个学习曲线，而Vue 3的学习曲线无疑比Vue 2的更陡峭。我仍然不相信两个版本之间的迁移工作是合理的，但组合式API要整洁得多，在你掌握了它之后会感觉很自然。
