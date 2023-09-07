@@ -3,13 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: HaloHuang Blog
-subtitle: HaloHuang
+title: Lee Blog
+subtitle: LiPenghui
 description: 学习 生活 成长
 keywords: '辉博客,阿辉博客,阿辉的个人博客,ES6,JS,WEB,web,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验'
-author: 黄贻飞
+author: 李鹏辉
 language: zh-CN
-email: halohuang_web@163.com
+email: ahuinet@163.com
+# email: halohuang_web@163.com
 timezone: ''
 
 # URL
