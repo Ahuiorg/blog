@@ -1,7 +1,8 @@
 ---
 title: js 数据结构
-date: 2023-09-18 14:24:52
 tags: js
+abbrlink: abd146cd
+date: 2023-09-18 14:24:52
 ---
 
 # **一、前言**
