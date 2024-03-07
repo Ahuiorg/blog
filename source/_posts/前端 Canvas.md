@@ -40,7 +40,7 @@ Canvas元素的学习需要具备一些基本的HTML和JavaScript知识。
   </canvas>
 </body>
 </html>
-复制代码
+
 ```
 
 上面代码就是一个基本的使用Canvas标签的例子。可以看到我们为它设置了宽和高，还在 Canvas标签内部给出一个提示文案。在这里需要说明一下：
@@ -82,7 +82,7 @@ Canvas标签提供了一个方法叫：**getContext()** ，通过它我们可以
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 这里需要注意一点，getContext方法是有一个接收参数，它是绘图上下文的类型，可能的参数有：
@@ -149,7 +149,7 @@ Canvas标签提供了一个方法叫：**getContext()** ，通过它我们可以
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 为了展示的效果好一点，这里我调整了一下画布的大小：500 x 500，还给画布添加了一个阴影和圆角。得到的直线如图：
@@ -197,7 +197,7 @@ Canvas标签提供了一个方法叫：**getContext()** ，通过它我们可以
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 具体效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cd1e5ccce89a45b1ad42014996d1a4fb~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -249,7 +249,7 @@ strokeRect(x, y, width, height) 是用来绘制一个矩形的边框，x和y 是
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 如下图，strokeRect方法绘制的就是一个矩形框：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/991a1b38361c45c198bf4c4c6c032a6b~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -291,7 +291,7 @@ fillRect(x, y, width, height) 绘制一个填充的矩形，x和y 是矩形的�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 如下图，fillRect方法实现的是填充了一个矩形：
@@ -337,7 +337,7 @@ clearRect(x, y, width, height) 清除指定矩形区域，让清除部分完全�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 如下图，中间白色的矩形就是被指定清除的区域：
@@ -384,7 +384,7 @@ clearRect(x, y, width, height) 清除指定矩形区域，让清除部分完全�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下图：
@@ -432,7 +432,7 @@ clearRect(x, y, width, height) 清除指定矩形区域，让清除部分完全�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 但效果似乎不想我们想象的一样，如下图：
@@ -490,7 +490,7 @@ clearRect(x, y, width, height) 清除指定矩形区域，让清除部分完全�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 如上代码，咱们为每一条路径都设置了开启和闭合。那么看一下效果如何：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/046de181d48d43af9d49b1013f2a5ddc~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -556,7 +556,7 @@ stroke方法是通过线条来绘制图形轮廓，而fill方法则是通过填�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下图：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67227bfbf96d4399928a393ed37a4526~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -616,7 +616,7 @@ stroke方法是通过线条来绘制图形轮廓，而fill方法则是通过填�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c8f129671f5e4941b9189fa2c6cde821~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -667,7 +667,7 @@ stroke方法是通过线条来绘制图形轮廓，而fill方法则是通过填�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 得到的效果图如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/683b564d336c4cb4a4fc6e59bf0df4be~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -719,7 +719,7 @@ stroke方法是通过线条来绘制图形轮廓，而fill方法则是通过填�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a718a84ca7684686b74c25edd71164d0~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -773,7 +773,7 @@ stroke方法是通过线条来绘制图形轮廓，而fill方法则是通过填�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -841,7 +841,7 @@ lineWidth 设置当前绘线的粗细。属性值必须为正数。默认值是 
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8071fe30a17947a8a4c33af44b26bcec~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -905,7 +905,7 @@ lineCap 设置线段端点显示的样子。可选值为：butt，round 和 squa
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5030925e1429474080b32760128fae2c~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -978,7 +978,7 @@ lineJoin 该属性可以设置两线段连接处所显示的样子。可选值�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果为：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/75501ff07c904eff8183be292e51a17e~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -1036,7 +1036,7 @@ miterLimit 限制当两条线相交时交接处最大长度；所谓交接处长
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果为：
@@ -1096,7 +1096,7 @@ getLineDash 则是返回当前虚线设置的样式，长度为非负偶数的�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 先看效果再讲解，效果如下：
@@ -1161,7 +1161,7 @@ lineDashOffset 设置虚线样式的起始偏移量。
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果为：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5fbdfa2b8bfc4a74ae7847fa9ed4e5d1~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -1222,7 +1222,7 @@ lineDashOffset 设置虚线样式的起始偏移量。
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -1286,7 +1286,7 @@ lineDashOffset 设置虚线样式的起始偏移量。
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ef384c3981a4f28aa1ee4ad203d2d25~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -1358,7 +1358,7 @@ lineDashOffset 设置虚线样式的起始偏移量。
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -1416,7 +1416,7 @@ Canvas中想绘制图案效果，需要用 createPattern 方法来实现。
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 上面是一个用image对象绘制的例子，效果如下：
@@ -1466,7 +1466,7 @@ Canvas中想绘制图案效果，需要用 createPattern 方法来实现。
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 设置为平铺（repeat），效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1cb18941591d4d809c58f462e8b8aeb0~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)这其实才是我们想要的效果，那么咱们再看看沿X轴平铺（repeat-x）和沿Y轴平铺（repeat-y）
@@ -1528,7 +1528,7 @@ Canvas中想绘制图案效果，需要用 createPattern 方法来实现。
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -1584,7 +1584,7 @@ canvas 中依旧提供了两种方法来渲染文本，一种是描边一种是�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 看一下效果：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2cb4a32ebfb84ea583ad45b5211a287c~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -1632,7 +1632,7 @@ canvas 中依旧提供了两种方法来渲染文本，一种是描边一种是�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 ### 文本样式
@@ -1704,7 +1704,7 @@ canvas 中依旧提供了两种方法来渲染文本，一种是描边一种是�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -1761,7 +1761,7 @@ canvas 中依旧提供了两种方法来渲染文本，一种是描边一种是�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -1814,7 +1814,7 @@ canvas 中依旧提供了两种方法来渲染文本，一种是描边一种是�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/55d40c4f309c41c8a0d24a6518ca0a93~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -1902,7 +1902,7 @@ shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a8d69341f5764802b3e5480138db0461~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -1963,7 +1963,7 @@ drawImage(image, dx, dy)：只有单纯的绘制功能，可以绘制图片、�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/936ed533db894931b32f4b1c3a745f3b~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2012,7 +2012,7 @@ drawImage(image, dx, dy, dWidth, dHeight)：在绘制的基础上我们又增加
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/710caf686a834b49902c5d125105eb42~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2062,7 +2062,7 @@ drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)：在缩放�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 上面代码其实就是：在原图片的（100，100）位置，裁剪一个300*300大小的内容，然后再缩放到500*500绘制到Canvas中（0, 0）的地方。
@@ -2117,7 +2117,7 @@ save() 和 restore() 方法是用来保存和恢复 canvas 状态的，方法不
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d970372edee4584a2172e2c2f66eb8a~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2183,7 +2183,7 @@ PS：保存和恢复可以多次调用， 需要注意的是每一次调用 rest
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e86ec6c7db354e8280171c1bba5d4aee~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2265,7 +2265,7 @@ save()保存的状态是可以多次保存的，同时保存在栈中的元素�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -2326,7 +2326,7 @@ save()保存的状态是可以多次保存的，同时保存在栈中的元素�
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ddb732b70768468293abcbf76d0ac6f7~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2337,7 +2337,7 @@ save()保存的状态是可以多次保存的，同时保存在栈中的元素�
 
 ```ini
  ctx.globalCompositeOperation = 'source-in'
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e09e4ceb1cf24b35be4febb90a5f9209~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2348,7 +2348,7 @@ save()保存的状态是可以多次保存的，同时保存在栈中的元素�
 
 ```ini
 ctx.globalCompositeOperation = 'source-out'
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0457eecc718b430f92b4c13bfb5df8c5~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2359,7 +2359,7 @@ ctx.globalCompositeOperation = 'source-out'
 
 ```ini
 ctx.globalCompositeOperation = 'source-atop'
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9ea00c088ccd4c1ba626f248ca2387a2~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2370,7 +2370,7 @@ ctx.globalCompositeOperation = 'source-atop'
 
 ```ini
 ctx.globalCompositeOperation = 'destination-over'
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ffeb9d1e79724f92b6957f000d082a94~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2381,7 +2381,7 @@ ctx.globalCompositeOperation = 'destination-over'
 
 ```ini
 ctx.globalCompositeOperation = 'destination-in'
-复制代码
+
 ```
 
 效果如下：
@@ -2394,7 +2394,7 @@ ctx.globalCompositeOperation = 'destination-in'
 
 ```ini
 ctx.globalCompositeOperation = 'destination-out'
-复制代码
+
 ```
 
 效果如下：
@@ -2407,7 +2407,7 @@ ctx.globalCompositeOperation = 'destination-out'
 
 ```ini
 ctx.globalCompositeOperation = 'destination-atop'
-复制代码
+
 ```
 
 效果如下：
@@ -2420,7 +2420,7 @@ ctx.globalCompositeOperation = 'destination-atop'
 
 ```ini
 ctx.globalCompositeOperation = 'lighter'
-复制代码
+
 ```
 
 效果如下：
@@ -2433,7 +2433,7 @@ ctx.globalCompositeOperation = 'lighter'
 
 ```ini
 ctx.globalCompositeOperation = 'copy'
-复制代码
+
 ```
 
 效果如下：
@@ -2446,7 +2446,7 @@ ctx.globalCompositeOperation = 'copy'
 
 ```ini
 ctx.globalCompositeOperation = 'xor'
-复制代码
+
 ```
 
 效果如下：
@@ -2459,7 +2459,7 @@ ctx.globalCompositeOperation = 'xor'
 
 ```ini
 ctx.globalCompositeOperation = 'multiply'
-复制代码
+
 ```
 
 效果如下：
@@ -2472,7 +2472,7 @@ ctx.globalCompositeOperation = 'multiply'
 
 ```ini
 ctx.globalCompositeOperation = 'screen'
-复制代码
+
 ```
 
 效果如下：
@@ -2485,7 +2485,7 @@ multiply 和 screen 的结合，原本暗的地方更暗，原本亮的地方更
 
 ```ini
 ctx.globalCompositeOperation = 'overlay'
-复制代码
+
 ```
 
 效果如下：
@@ -2498,7 +2498,7 @@ ctx.globalCompositeOperation = 'overlay'
 
 ```ini
 ctx.globalCompositeOperation = 'darken'
-复制代码
+
 ```
 
 效果如下：
@@ -2511,7 +2511,7 @@ ctx.globalCompositeOperation = 'darken'
 
 ```ini
 ctx.globalCompositeOperation = 'lighten'
-复制代码
+
 ```
 
 效果如下：
@@ -2524,7 +2524,7 @@ ctx.globalCompositeOperation = 'lighten'
 
 ```ini
 ctx.globalCompositeOperation = 'color-dodge'
-复制代码
+
 ```
 
 效果如下：
@@ -2537,7 +2537,7 @@ ctx.globalCompositeOperation = 'color-dodge'
 
 ```ini
 ctx.globalCompositeOperation = 'color-burn'
-复制代码
+
 ```
 
 效果如下：
@@ -2550,7 +2550,7 @@ ctx.globalCompositeOperation = 'color-burn'
 
 ```ini
 ctx.globalCompositeOperation = 'hard-light'
-复制代码
+
 ```
 
 效果如下：
@@ -2563,7 +2563,7 @@ ctx.globalCompositeOperation = 'hard-light'
 
 ```ini
 ctx.globalCompositeOperation = 'soft-light'
-复制代码
+
 ```
 
 效果如下：
@@ -2576,7 +2576,7 @@ ctx.globalCompositeOperation = 'soft-light'
 
 ```ini
 ctx.globalCompositeOperation = 'difference'
-复制代码
+
 ```
 
 效果如下：
@@ -2589,7 +2589,7 @@ ctx.globalCompositeOperation = 'difference'
 
 ```ini
 ctx.globalCompositeOperation = 'exclusion'
-复制代码
+
 ```
 
 效果如下：
@@ -2602,7 +2602,7 @@ ctx.globalCompositeOperation = 'exclusion'
 
 ```ini
 ctx.globalCompositeOperation = 'hue'
-复制代码
+
 ```
 
 效果如下：
@@ -2615,7 +2615,7 @@ ctx.globalCompositeOperation = 'hue'
 
 ```ini
 ctx.globalCompositeOperation = 'saturation'
-复制代码
+
 ```
 
 效果如下：
@@ -2628,7 +2628,7 @@ ctx.globalCompositeOperation = 'saturation'
 
 ```ini
 ctx.globalCompositeOperation = 'color'
-复制代码
+
 ```
 
 效果如下：
@@ -2641,7 +2641,7 @@ ctx.globalCompositeOperation = 'color'
 
 ```ini
 ctx.globalCompositeOperation = 'luminosity'
-复制代码
+
 ```
 
 效果如下：
@@ -2702,7 +2702,7 @@ ctx.globalCompositeOperation = 'luminosity'
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -2774,7 +2774,7 @@ Path2D()有不少方法，先了解一下：
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 ## 动画
@@ -2865,7 +2865,7 @@ Path2D()有不少方法，先了解一下：
 </body>
 </html>
 
-复制代码
+
 ```
 
 效果如下：
@@ -2933,7 +2933,7 @@ Path2D()有不少方法，先了解一下：
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/153ebb63d4cf486e8b9add00bb3017d5~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -2998,7 +2998,7 @@ Path2D()有不少方法，先了解一下：
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ef52a334d214b31a842d2662267cae0~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -3070,7 +3070,7 @@ Path2D()有不少方法，先了解一下：
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 添加完边界的效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0ba1d17997aa439d801407c58b9bc1ef~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -3145,7 +3145,7 @@ Path2D()有不少方法，先了解一下：
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/919d64c7eda34716bf7e683ca6ad4ba4~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -3223,7 +3223,7 @@ Path2D()有不少方法，先了解一下：
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -3359,7 +3359,7 @@ canvas.toDataURL('image/jpeg', quality)，也可以设定为创建一个 JPG 图
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d18f27e3874f4c1d8291313e6d48add6~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
@@ -3451,7 +3451,7 @@ canvas.toDataURL('image/jpeg', quality)，也可以设定为创建一个 JPG 图
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：
@@ -3538,7 +3538,7 @@ canvas.toDataURL('image/jpeg', quality)，也可以设定为创建一个 JPG 图
   </script>
 </body>
 </html>
-复制代码
+
 ```
 
 效果如下：

@@ -54,7 +54,7 @@ yarn create vite vite-vue-js-template --template vue
 
 # pnpm
 pnpm create vite vite-vue-js-template --template vue
-复制代码
+
 ```
 
 这一指令将会安装并执行 **create-vite**[19]，它是一个基本模板快速启动项目工具。
@@ -72,7 +72,7 @@ npm install
 
 # 启动项目
 npm run dev
-复制代码
+
 ```
 
 ![图片](https://mmbiz.qpic.cn/mmbiz/pfCCZhlbMQTKJwX2UrGjOSEIicyga1nNBnVoibf5iaQYQm090gdAyJ7nZJViaKicpQRd9JhibGbNdnF3pt7BIMuJJJqA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1)启动项目
@@ -123,7 +123,7 @@ export default defineConfig({
       reportCompressedSize: false,
     },
 });
-复制代码
+
 ```
 
 关于 Vite 更多配置项及用法，请查看 Vite 官网 **vitejs.dev/config/**[20] 。
@@ -149,7 +149,7 @@ export default defineConfig({
 ├── jsconfig.json                  // JavaScript 配置文件
 ├── vite.config.js                 // Vite 配置文件
 └── package.json
-复制代码
+
 ```
 
 ## 集成 Vue Router 路由工具
@@ -158,7 +158,7 @@ export default defineConfig({
 
 ```
 npm i vue-router@4
-复制代码
+
 ```
 
 ### 创建路由配置文件
@@ -170,7 +170,7 @@ npm i vue-router@4
     ├── router/
     	├── modules/  // 路由模块
         ├── index.js  // 路由配置文件
-复制代码
+
 ```
 
 关于路由表，建议根据功能的不同来拆分到 `modules` 文件夹中，好处是：
@@ -192,7 +192,7 @@ export default [
     component: () => import('@/views/AboutView.vue'),
   },
 ];
-复制代码
+
 import { createRouter, createWebHistory } from 'vue-router';
 
 import baseRouters from './modules/base';
@@ -212,7 +212,7 @@ const router = createRouter({
 });
 
 export default router;
-复制代码
+
 ```
 
 根据路由配置的实际情况，需要在 `src` 下创建 `views` 目录，用来存储页面组件。
@@ -228,7 +228,7 @@ import App from './App.vue';
 import router from './router';
 
 createApp(App).use(router).mount('#app');
-复制代码
+
 ```
 
 ## 集成 Pinia 全局状态管理工具
@@ -237,7 +237,7 @@ createApp(App).use(router).mount('#app');
 
 ```
 npm i pinia
-复制代码
+
 ```
 
 ### 创建仓库配置文件
@@ -249,7 +249,7 @@ npm i pinia
     ├── store/
     	├── modules/  // 仓库模块
         ├── index.js  // 仓库配置文件
-复制代码
+
 import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counter', {
@@ -262,7 +262,7 @@ export const useCounterStore = defineStore('counter', {
     },
   },
 });
-复制代码
+
 import { createPinia } from 'pinia';
 
 const store = createPinia();
@@ -270,7 +270,7 @@ const store = createPinia();
 export default store;
 
 export * from './modules/counter';
-复制代码
+
 ```
 
 开发中需要将不同功能所对应的状态，拆分到不同的 `modules`，好处如同路由模块一样。
@@ -287,7 +287,7 @@ import store from './store';
 import router from './router';
 
 createApp(App).use(router).use(store).mount('#app');
-复制代码
+
 ```
 
 ## 集成 TDesign Vue Next 组件库
@@ -296,7 +296,7 @@ createApp(App).use(router).use(store).mount('#app');
 
 ```
 npm i tdesign-vue-next
-复制代码
+
 ```
 
 ### 基础使用
@@ -311,7 +311,7 @@ import 'tdesign-vue-next/es/style/index.css';
 
 const app = createApp(App);
 app.use(TDesign);
-复制代码
+
 ```
 
 ### 按需引入
@@ -320,7 +320,7 @@ app.use(TDesign);
 
 ```
 npm install unplugin-vue-components unplugin-auto-import -D
-复制代码
+
 ```
 
 在 Vite 对应的配置文件 `vite.config.js` 添加上述插件：
@@ -344,7 +344,7 @@ export default {
     }),
   ],
 };
-复制代码
+
 ```
 
 ## 集成 Axios HTTP 工具
@@ -353,7 +353,7 @@ export default {
 
 ```
 npm i axios
-复制代码
+
 ```
 
 ### 请求配置
@@ -365,7 +365,7 @@ npm i axios
 	├── api  // 接口
     ├── utils/
         ├── request.js  // axios 请求库二次封装
-复制代码
+
 import axios from 'axios';
 
 // 创建请求实例
@@ -469,7 +469,7 @@ export function _delete(url, params = {}) {
 }
 
 export default instance;
-复制代码
+
 ```
 
 之后在 `api` 文件夹中以业务模型对接口进行拆分，举个例子，将所有跟用户相关接口封装在 `User` 类中，此类称作用户模型。
@@ -493,7 +493,7 @@ export default class User {
     });
   }
 }
-复制代码
+
 ```
 
 把每个业务模型独立成一个 js 文件，声明一个类通过其属性和方法来实现这个模型相关的数据获取，这样可以大大提升代码的可读性与可维护性。
@@ -521,7 +521,7 @@ export default {
   },
 };
 </script>
-复制代码
+
 ```
 
 ## 集成 CSS 预处理器 Less
@@ -534,7 +534,7 @@ Vite 内部已帮我们集成了相关的 `loader`，不需要额外配置。
 
 ```
 npm i less -D
-复制代码
+
 ```
 
 ### 如何使用
@@ -543,7 +543,7 @@ npm i less -D
 
 ```
 <style lang="less"></style>
-复制代码
+
 ```
 
 > CSS 命名规范推荐 BEM 命名规范
@@ -558,7 +558,7 @@ npm i less -D
 └── src/
     ├── style/
         ├── variables.less  // 全局样式文件
-复制代码
+
 ```
 
 在 `vite.config.js` 配置文件中新增 CSS 预处理器相关配置即可实现 less 全局样式：
@@ -579,7 +579,7 @@ export default defineConfig({
       },
     },
 });
-复制代码
+
 ```
 
 ### 样式穿透
@@ -603,7 +603,7 @@ export default defineConfig({
 :global(selector) {
   /* ... */
 }
-复制代码
+
 ```
 
 至此，一个基于 JavaScript + Vite3 + Vue3 + Vue Router + Pinia + Axios + Less 的前端项目开发环境搭建完毕。
@@ -657,7 +657,7 @@ trim_trailing_whitespace = false
 # 表示仅 ts、js、vue、css 文件适用以下规则
 [*.{ts,js,vue,css}]
 indent_size = 2
-复制代码
+
 ```
 
 > 很多 IDE 中会默认支持此配置，但是也有些不支持，如：VSCode、Atom、Sublime Text 等。
@@ -683,7 +683,7 @@ EditorConfig for VS Code
 
 ```
 npm i eslint eslint-define-config eslint-config-airbnb-base eslint-plugin-import eslint-plugin-vue vue-eslint-parser -D
-复制代码
+
 ```
 
 ### 安装插件
@@ -796,7 +796,7 @@ module.exports = defineConfig({
     },
   ],
 });
-复制代码
+
 ```
 
 > 关于更多配置项信息，请前往 ESLint 官网查看 **ESLint-Configuring**[32]
@@ -809,7 +809,7 @@ module.exports = defineConfig({
 dist
 node_modules
 !.prettierrc.js
-复制代码
+
 ```
 
 ## 集成 Prettier 配置
@@ -820,7 +820,7 @@ node_modules
 
 ```
 npm i prettier -D
-复制代码
+
 ```
 
 ### 安装插件
@@ -881,7 +881,7 @@ module.exports = {
   // html, vue, jsx 中每个属性占一行
   singleAttributePerLine: false,
 };
-复制代码
+
 ```
 
 > 关于更多配置项信息，请前往 Prettier 官网查看 **Prettier-Options**[35]
@@ -912,7 +912,7 @@ pnpm-lock.yaml
 ## Built-files
 .cache
 dist
-复制代码
+
 ```
 
 ## 解决 Prettier 和 ESLint 冲突
@@ -930,7 +930,7 @@ dist
 
 ```
 npm i eslint-plugin-prettier eslint-config-prettier -D
-复制代码
+
 ```
 
 ### 修改 ESLint 配置文件
@@ -947,7 +947,7 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
 }
-复制代码
+
 ```
 
 ## 自动格式化代码
@@ -961,7 +961,7 @@ Visual Studio Code 在 `settings.json` 设置文件中，增加以下代码：
     "source.fixAll.eslint": true
   }
 }
-复制代码
+
 ```
 
 WebStorm 打开设置窗口，按如下操作，最后点击 `Apply` -> `OK`：
@@ -982,7 +982,7 @@ Stylelint 是一个强大、先进的 CSS 代码检查器（linter），可以�
 
 ```
 npm i stylelint stylelint-config-prettier stylelint-config-standard stylelint-config-recommended-vue stylelint-order -D
-复制代码
+
 ```
 
 ### 安装插件
@@ -1136,7 +1136,7 @@ module.exports = {
     ],
   },
 }
-复制代码
+
 ```
 
 ### 创建 Stylelint 过滤规则
@@ -1159,7 +1159,7 @@ module.exports = {
 /public/*
 public/*
 /node_modules/
-复制代码
+
 ```
 
 ### 启用 Vue 文件支持
@@ -1174,7 +1174,7 @@ public/*
 
 ```
 npm i stylelint-config-html postcss-html postcss-less -D
-复制代码
+
 ```
 
 #### 修改 Stylelint 配置文件
@@ -1213,7 +1213,7 @@ module.exports = {
     },
   ],
 };
-复制代码
+
 ```
 
 #### 修改 Visual Studio Code 工作区配置
@@ -1224,7 +1224,7 @@ Visual Studio Code 在 `settings.json` 设置文件中，增加以下代码：
 {
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"]
 }
-复制代码
+
 ```
 
 ## 集成 husky 和 lint-staged
@@ -1252,7 +1252,7 @@ npx husky-init
 
 # 安装依赖
 npm install
-复制代码
+
 ```
 
 husky 包含很多 `hook`（钩子），常用有：`pre-commit`、`commit-msg`。
@@ -1261,7 +1261,7 @@ husky 包含很多 `hook`（钩子），常用有：`pre-commit`、`commit-msg`�
 
 ```
 eslint --fix ./src --ext .vue,.js,.ts
-复制代码
+
 ```
 
 `pre-commit` hook 文件作用是：当执行 `git commit \-m "xxx"` 时，会先对 `src` 目录下所有的 `.vue`、`.js`、`.ts` 文件执行 `eslint \--fix` 命令，如果 ESLint 通过，成功 `commit`，否则终止 `commit`。
@@ -1280,7 +1280,7 @@ lint-staged 一般结合 husky 来使用，它可以让 husky 的 `hook` 触发�
 
 ```
 npm i lint-staged -D
-复制代码
+
 ```
 
 #### 新增配置
@@ -1311,7 +1311,7 @@ npm i lint-staged -D
     ]
   },
 }
-复制代码
+
 ```
 
 #### 修改触发命令
@@ -1320,7 +1320,7 @@ npm i lint-staged -D
 
 ```
 npx lint-staged
-复制代码
+
 ```
 
 pre-commit
@@ -1349,7 +1349,7 @@ Angular 团队提交规范
 <Body>
 
 <Footer>
-复制代码
+
 ```
 
 ### Header
@@ -1358,7 +1358,7 @@ Header 部分包括三个字段 type（必需）、scope（可选）和 subject�
 
 ```
 <type>(<scope>): <subject>
-复制代码
+
 ```
 
 **type**
@@ -1424,7 +1424,7 @@ body 是对本次 commit 的详细描述，可以分成多行。
   - do polling when neither popstate nor hashchange available
 
   Breaks $browser.onHashChange, which was removed (use onUrlChange instead)
-  复制代码
+  
   ```
 
 - fix
@@ -1438,21 +1438,21 @@ body 是对本次 commit 的详细描述，可以分成多行。
 
   Closes #392
   Breaks foo.bar api, foo.baz should be used instead
-  复制代码
+  
   ```
 
 - style
 
   ```
   style(location): add couple of missing semi colons
-  复制代码
+  
   ```
 
 - chore
 
   ```
   chore(release): v3.4.2
-  复制代码
+  
   ```
 
 ## 集成 cz-git 实现规范提交
@@ -1467,7 +1467,7 @@ cz-git
 
 ```
 npm install -D cz-git
-复制代码
+
 ```
 
 ### 指定适配器
@@ -1483,7 +1483,7 @@ npm install -D cz-git
     }
   }
 }
-复制代码
+
 ```
 
 ### 自定义配置（可选）
@@ -1504,7 +1504,7 @@ module.exports = {
     allowEmptyIssuePrefixs: false,
   },
 };
-复制代码
+
 ```
 
 本项目配置文件可参考：**commitlint.config.js**[55]
@@ -1517,14 +1517,14 @@ module.exports = {
 
 ```
 npm install -g cz-git commitizen
-复制代码
+
 ```
 
 #### 全局配置适配器类型
 
 ```
 echo '{ "path": "cz-git" }' > ~/.czrc
-复制代码
+
 ```
 
 #### 自定义配置（可选）
@@ -1536,7 +1536,7 @@ echo '{ "path": "cz-git" }' > ~/.czrc
   "path": "cz-git",
   "useEmoji": true
 }
-复制代码
+
 ```
 
 **方式二：与 commitlint[56] 配合**，在 `$HOME` 路径下创建配置文件 (**↓ 配置模板**[57])
@@ -1556,7 +1556,7 @@ echo '{ "path": "cz-git" }' > ~/.czrc
 
 ```
 npm i @commitlint/cli @commitlint/config-conventional -D
-复制代码
+
 ```
 
 ### 配置
@@ -1567,14 +1567,14 @@ npm i @commitlint/cli @commitlint/config-conventional -D
 module.exports = {
   extends: ['@commitlint/config-conventional']
 }
-复制代码
+
 ```
 
 使用 husky 命令在 `.husky` 目录下创建 `commit-msg` 文件，并在此执行验证命令：
 
 ```
 npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
-复制代码
+
 ```
 
 commit-msg
@@ -1626,7 +1626,7 @@ New secret
 
 ```
 "homepage": "https://[username].github.io/github-actions-demo",
-复制代码
+
 ```
 
 上面代码中，将 `[username]` 替换成你的 GitHub 用户名，参见**范例**[65]。
@@ -1686,7 +1686,7 @@ jobs:
           token: ${{ secrets.VITE_VUE_DEPLOY }}
           # 分支
           branch: gh-pages
-复制代码
+
 ```
 
 > 🔗 通过此链接 **ElanYoung.github.io/vite-vue-js…**[66] 即可访问本项目

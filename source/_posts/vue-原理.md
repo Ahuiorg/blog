@@ -179,7 +179,7 @@ date: 2023-05-15 13:38:12
 
 ```js
 js
-复制代码export function reactive(target: object) {
+export function reactive(target: object) {
   // if trying to observe a readonly proxy, return the readonly version.
   // 若目标对象是响应式的只读数据，则直接返回
   if (isReadonly(target)) {
@@ -225,8 +225,8 @@ js
 **源码位置：`packages\reactivity\src\reactive.ts`**
 
 ```js
-js
-复制代码function createReactiveObject(
+
+function createReactiveObject(
   target: Target,
   isReadonly: boolean,
   baseHandlers: ProxyHandler<any>,
@@ -286,7 +286,7 @@ js
 
 ```js
 js
-复制代码export const mutableHandlers: ProxyHandler<object> = {
+export const mutableHandlers: ProxyHandler<object> = {
   get,
   set,
   deleteProperty,
@@ -352,7 +352,7 @@ js
 
 ```js
 js
-复制代码function createGetter(isReadonly = false, shallow = false) {
+function createGetter(isReadonly = false, shallow = false) {
   return function get(target: Target, key: string | symbol, receiver: object) {
     // 当直接通过指定 key 访问 vue 内置自定义的对象属性时，返回其对应的值
     if (key === ReactiveFlags.IS_REACTIVE) {
@@ -428,7 +428,7 @@ js
 
 ```js
 js
-复制代码function createSetter(shallow = false) {
+function createSetter(shallow = false) {
   return function set(
     target: object,
     key: string | symbol,
@@ -488,7 +488,7 @@ js
 
 ```js
 js
-复制代码function deleteProperty(target: object, key: string | symbol): boolean {
+function deleteProperty(target: object, key: string | symbol): boolean {
   const hadKey = hasOwn(target, key)
   const oldValue = (target as any)[key]
   const result = Reflect.deleteProperty(target, key)
@@ -533,7 +533,7 @@ function ownKeys(target: object): (string | symbol)[] {
 
 ```js
 js
-复制代码function createSetter(shallow = false) {
+function createSetter(shallow = false) {
   return function set(
     target: object,
     key: string | symbol,
@@ -571,7 +571,7 @@ js
 
   ```js
   js
-  复制代码const obj = {}
+  const obj = {}
   const proxy = reactive([obj])
   console.log(proxy.includs(proxy[0])) // false
   ```
@@ -583,7 +583,7 @@ js
 
   ```js
   js
-  复制代码const obj = {}
+  const obj = {}
   const proxy = reactive([obj])
   console.log(proxy.includs(obj)) // false
   ```
@@ -617,7 +617,7 @@ js
 
 ```js
 js
-复制代码;(['includes', 'indexOf', 'lastIndexOf'] as const).forEach(key => {
+;(['includes', 'indexOf', 'lastIndexOf'] as const).forEach(key => {
     instrumentations[key] = function (this: unknown[], ...args: unknown[]) {
       // 外部调用上述方法，默认其内的 this 指向的是代理数组对象，
       // 但实际上是需要通过原始数组中进行遍历查找
@@ -643,7 +643,7 @@ js
 
 ```js
 js
-复制代码const proxy = reactive([])
+const proxy = reactive([])
 
 // 第一个副作用函数
 effect(() => {
@@ -666,7 +666,7 @@ effect(() => {
 
 ```js
 js
-复制代码;(['push', 'pop', 'shift', 'unshift', 'splice'] as const).forEach(key => {
+;(['push', 'pop', 'shift', 'unshift', 'splice'] as const).forEach(key => {
     instrumentations[key] = function (this: unknown[], ...args: unknown[]) {
       pauseTracking()
       const res = (toRaw(this) as any)[key].apply(this, args)
@@ -717,7 +717,7 @@ js
 
 ```js
 js
-复制代码function has(this: CollectionTypes, key: unknown, isReadonly = false): boolean {
+function has(this: CollectionTypes, key: unknown, isReadonly = false): boolean {
   const target = (this as any)[ReactiveFlags.RAW]
   const rawTarget = toRaw(target)
   const rawKey = toRaw(key)
@@ -753,7 +753,7 @@ function size(target: IterableCollections, isReadonly = false) {
 
 ```js
 js
-复制代码function createInstrumentations() {
+function createInstrumentations() {
   const mutableInstrumentations: Record<string, Function> = {
     get(this: MapTypes, key: unknown) {// track
       return get(this, key)
@@ -784,7 +784,7 @@ js
 
 ```js
 js
-复制代码 // 原数数据 originalData1
+ // 原数数据 originalData1
   const originalData1 = new Map({});
   // 代理对象 proxyData1
   const proxyData1 = reactive(originalData1);
@@ -816,7 +816,7 @@ js
 
 ```js
 js
-复制代码function createForEach(isReadonly: boolean, isShallow: boolean) {
+function createForEach(isReadonly: boolean, isShallow: boolean) {
   return function forEach(
     this: IterableCollections,
     callback: Function,
@@ -850,7 +850,7 @@ js
 
 ```js
 js
-复制代码const iteratorMethods = ['keys', 'values', 'entries', Symbol.iterator]
+const iteratorMethods = ['keys', 'values', 'entries', Symbol.iterator]
   iteratorMethods.forEach(method => {
     mutableInstrumentations[method as string] = createIterableMethod(
       method,
@@ -903,7 +903,7 @@ js
 
   ```js
   js
-  复制代码const refProxy = ref({name: 'zs'})
+  const refProxy = ref({name: 'zs'})
   refProxy.value.name = 'ls'
   ```
 
@@ -913,7 +913,7 @@ js
 
 ```js
 js
-复制代码export function ref(value?: unknown) {
+export function ref(value?: unknown) {
   return createRef(value, false)
 }
 
@@ -1000,7 +1000,7 @@ export const toReactive = <T extends unknown>(value: T): T =>
 
 ```js
 js
-复制代码const targetMap = new WeakMap<any, KeyToDepMap>()
+const targetMap = new WeakMap<any, KeyToDepMap>()
 
 export function track(target: object, type: TrackOpTypes, key: unknown) {
   // 当前应该进行依赖收集 且 有对应的副作用函数时，才会进行依赖收集

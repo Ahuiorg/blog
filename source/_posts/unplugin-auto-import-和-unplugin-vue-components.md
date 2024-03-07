@@ -35,7 +35,6 @@ tags:
 pnpm add -D unplugin-auto-import
 
 pnpm add -D unplugin-vue-components
-复制代码
 ```
 
 ## vite 版本
@@ -54,7 +53,6 @@ AutoImport({
 Components({
     resolvers: [ElementPlusResolver()],
 }),
-复制代码
 ```
 
 ### 问题1：自动导入的依然 eslint 报错
@@ -79,7 +77,7 @@ AutoImport({
     enabled: true
   },
 }),
-复制代码
+
 ```
 
 eslintrc 中 enabled 设置为 true，保存之后会随即在跟目录下生成 .eslintrc-auto-import.json 文件。
@@ -146,7 +144,7 @@ eslintrc 中 enabled 设置为 true，保存之后会随即在跟目录下生成
     "watchSyncEffect": true
   }
 }
-复制代码
+
 ```
 
 然后将这个文件引入 .eslintrc.cjs
@@ -156,7 +154,7 @@ extends: [
     // ...
     './.eslintrc-auto-import.json' 
 ]
-复制代码
+
 ```
 
 到此，该问题就完美解决了。
@@ -175,7 +173,7 @@ Components({
   // 新增如下
   dts: 'src/components.d.ts'
 }),
-复制代码
+
 ```
 
 到此该问题也就 完美解决了。
