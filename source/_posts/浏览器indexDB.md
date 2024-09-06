@@ -1,5 +1,6 @@
 ---
 title: 浏览器indexDB
+abbrlink: 5feabfc2
 date: 2024-03-07 19:59:05
 tags:
 ---
