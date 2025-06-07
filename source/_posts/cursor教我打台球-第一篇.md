@@ -1,9 +1,10 @@
 ---
-title: '台球规范发力'
-sub: '新手入门第一篇'
+title: 'cursor教我打台球---第一篇'
 abbrlink: 5ed305ea
 date: 2025-06-04 09:41:13
-tags: [台球,发力]
+tags:
+  - 台球
+  - cursor
 ---
 ## 一、站姿（Stance）
 
